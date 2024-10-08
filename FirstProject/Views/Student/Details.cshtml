@@ -1,0 +1,10 @@
+﻿@model Student
+@{
+    Layout = "_Layout2";
+    ViewBag.Title = "Student Details";
+}
+
+
+    <h1 class="alert alert-danger">
+        @Model.StudentId :: @Model.StudentName :: @Model.StudentAge
+    </h1>

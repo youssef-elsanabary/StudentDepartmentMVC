@@ -1,0 +1,20 @@
+﻿@model Student
+@{
+    Layout = "_Layout2";
+    ViewBag.Title = "Add Student";
+
+}
+
+    <form  method="post">
+        Name:<input asp-for="StudentName"/><span asp-validation-for="StudentName"></span><br/>
+        Email:<input asp-for="StudentEmail" /><span asp-validation-for="StudentEmail"></span><br />
+        Age: <input asp-for="StudentAge" /><span asp-validation-for="StudentAge"></span><br />
+        Password:<input asp-for="Password" /><span asp-validation-for="Password"></span><br />
+        Confirmation Password:<input asp-for="ConfirmPassword" /><span asp-validation-for="ConfirmPassword"></span><br />
+        Department: <select asp-for="DeptNo" asp-items="ViewBag.Department"></select><br />
+        <input type="submit" value="Add" /><br/>
+    </form>
+    
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>

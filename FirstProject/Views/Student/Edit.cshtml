@@ -1,0 +1,14 @@
+﻿@model Student
+@{
+    Layout = "_Layout2";
+    ViewBag.Title = "Edit Student";
+}
+
+
+    <form method="post">
+        <label asp-for="StudentName"></label> <input asp-for="StudentName" /><br />
+        <label asp-for="StudentAge"></label> <input asp-for="StudentAge"/><br />
+        <label asp-for="DeptNo"></label> <select asp-for="DeptNo" asp-items="ViewBag.Department"></select><br />
+        <input type="submit" value="update"/>
+    </form>
+

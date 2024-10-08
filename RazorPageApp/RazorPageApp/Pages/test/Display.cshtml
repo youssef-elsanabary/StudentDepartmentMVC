@@ -1,0 +1,14 @@
+﻿@page
+@model DisplayModel
+<html>
+    <head>
+        <title>Displa</title>
+    </head>
+    <body>
+        <h1>Hello from Razor Page from @Model.Name</h1>
+        <form method="post">
+            Name:<input asp-for="Name" />
+            <input type="submit" value="Add"/>
+        </form>
+    </body>
+</html>

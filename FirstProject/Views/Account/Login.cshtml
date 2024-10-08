@@ -1,0 +1,13 @@
+﻿@model LoginViewModel
+@{
+    Layout = "_Layout";
+}
+
+
+    <form method="post">
+        <div asp-validation-summary="ModelOnly"></div>
+        <input asp-for="UserName" /><span asp-validation-for="UserName"></span><br />
+        <input asp-for="Password" /><span asp-validation-for="Password"></span><br />
+        <input type="submit" value="Login" />
+    </form>
+

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Student>
+@{
+    Layout = "_Layout";
+   // ViewBag.Title = "Show Student";
+}
+
+
+    <a asp-action="addstudent" class="btn btn-warning">Add Student</a>
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Department</th>
+            <th>Operations</th>
+        </tr>
+        @if(Model.Count()>0)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.StudentId</td>
+                    <td>@item.StudentName</td>
+                    <td>@item.StudentAge</td>
+                    <td>@item.Department.DepartmentName</td>
+                    <td>
+                        <a asp-action="details" asp-route-id="@item.StudentId"  class="btn btn-info">Details</a>
+                        <a asp-action="edit" asp-route-id="@item.StudentId" class="btn btn-danger">Edit</a>
+                        <a asp-action="delete" asp-route-id="@item.StudentId" class="btn btn-warning">Delete</a>
+
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="3"> No student Found</td>
+            </tr>
+        }
+    </table>
